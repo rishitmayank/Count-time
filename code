@@ -1,0 +1,18 @@
+import datetime
+
+today = datetime.date.today()
+print("EVENT COUNTDOWN")
+day = int(input("Day: ").strip())
+month = int(input("Month: ").strip())
+year = int(input("Year: ").strip())
+event = datetime.date(year, month, day)
+
+difference = event - today
+print(difference)
+
+if difference > datetime.timedelta(0):
+  print(difference)
+elif difference < datetime.timedelta(0):
+  print("🥳🥳🥳🥳🥳")
+else:
+  print("🥹🥹🥹🥹🥹🥹")
